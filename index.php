@@ -7,14 +7,19 @@
 </head>
 <body>
     <form action="index.php" method="post">
-        <input type="checkbox" name="taco" value="Taco">Taco<br>
-        <input type="checkbox" name="hamburger" value="Hamburger">Hamburger<br>
-        <input type="checkbox" name="hotdog" value="Hotdog">Hotdog<br>
-        <input type="submit" value="submit">
+        <p>Select your favourite snacks;</p>
+        <input type="radio" name="food" value="Taco">Taco<br>
+        <input type="radio" name="food" value="Hamburger">Hamburger<br>
+        <input type="radio" name="food" value="Hotdog">Hotdog<br>
+        <input type="submit" name="submit" value="submit">
     </form>
 </body>
 </html>
 
 <?php
-    // echo("Hello World!");
+    if(isset($_POST["submit"])) {
+        $selected = $_POST["food"];
+        echo $selected;
+        // echo "selected sth";
+    }
 ?>
