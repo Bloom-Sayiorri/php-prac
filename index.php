@@ -18,8 +18,6 @@
 
 <?php
     if(isset($_POST["submit"])) {
-        $selected = $_POST["food"];
-        echo $selected;
-        // echo "selected sth";
+        echo "You tried to submit";
     }
 ?>
